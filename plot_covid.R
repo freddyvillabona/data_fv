@@ -2,6 +2,8 @@ library(plotly)
 library(tidyr)
 library(tidyr)
 library(lubridate)
+library(readr)
+library(coronavirus)
 
 data <- read_rds("data1.rds", refhook = NULL)
 data$date <- as.Date(data$date)
@@ -39,18 +41,9 @@ plot_ly(data= aaa ,
          yaxis = list(title = "Número de casos"),
          xaxis = list(title = ""))
 
-
-
-
-
-
-
-
-
-
-
-
   
+data(coronavirus)
+data <- coronavirus
 cv <- data %>% 
   group_by(type, date) %>%
   summarise(total_cases = sum(cases)) %>%
@@ -79,9 +72,9 @@ cv <- data %>%
   layout(title = "Distribución de casos",
          legend = list(x = 0.1, y = 0.9),
          yaxis = list(title = "Número de casos"),
-         xaxis = list(title = "Datos: Johns Hopkins University Center for Systems Science and Engineering"))
+         xaxis = list(title = ""))
 
-  conf_df <- coronavirus
+
   
   
   library(plotly)
@@ -96,6 +89,8 @@ cv <- data %>%
     mutate(parents = "Confirmed") %>%
     ungroup() 
   
+  
+  
   plot_ly(data = conf_df,
           type= "treemap",
           values = ~total_cases,
@@ -105,4 +100,70 @@ cv <- data %>%
           name = "Casos confirmados",
           textinfo="label+value+percent parent")  
   
+  
+  
+######
+#  FUMADORES
+######  
+  
+  fumadores <- data %>% 
+    filter(continent == "Africa") 
+  
+  fumadores <- select(fumadores, date, 
+                      male_smokers,
+                      female_smokers
+                      )
+  fumadores <- 
+    fumadores %>%
+    group_by(fecha = lubridate::floor_date(date, "month")) %>%
+    summarise(female_smokers = sum(female_smokers),
+              male_smokers = sum(male_smokers))  
+  
+  
+  
+  
+  plot_ly(data= fumadores ,
+          x = ~ fecha,
+          y = ~ female_smokers,
+          name = 'Activos', 
+          fillcolor = '#1f77b4',
+          type = 'scatter',
+          mode = 'none', 
+          stackgroup = 'one') %>%
+    add_trace(y = ~ male_smokers, 
+              name = "male_smokers",
+              fillcolor = '#E41317') %>%
+#    add_trace(y = ~recovered_total, 
+#              name = 'Recuperados', 
+#              fillcolor = 'forestgreen') %>%
+    layout(title = "Distribución de casos",
+           legend = list(x = 0.1, y = 0.9),
+           yaxis = list(title = "Número de casos"),
+           xaxis = list(title = "Datos: Johns Hopkins University Center for Systems Science and Engineering"))
+  
+  names(fumadores)
+  
+  
+  p3 <- plot_ly(fumadores,
+                x = ~fecha,
+                y = ~male_smokers,
+                type = "bar",
+                name = "Hombres") %>% 
+    add_trace(y = ~female_smokers,
+              name = "Mujeres") %>% 
+    layout(yaxis = list(title = "Número de contagios"),
+           barmode = "group")
+  p3
+  
+  
+  p4 <- plot_ly(gBarChart,
+                x = ~Cities,
+                y = ~GroupA,
+                type = "bar",
+                name = "group A") %>% 
+    add_trace(y = ~GroupB,
+              name = "Group B") %>% 
+    layout(yaxis = list(title = "Cities"),
+           barmode = "stack")
+  p4  
   

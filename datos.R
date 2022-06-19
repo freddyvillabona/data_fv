@@ -32,6 +32,33 @@ data <- data %>%
 
 
 
+conf_df_t <- coronavirus %>% 
+  filter(type == "confirmed") %>%
+  group_by(country) %>%
+  summarise(total_cases = sum(cases)) %>%
+  arrange(-total_cases) %>%
+  mutate(parents = "Confirmed") %>%
+  ungroup()
+
+
+# Global
+
+gg <- select(data, date, Nuevos_casos, 
+             new_deaths, new_vaccinations,
+             female_smokers, male_smokers, 
+             Pacientes_en_UCI)
+ggg <- 
+  gg %>%
+  group_by(fecha = lubridate::floor_date(date, "month")) %>%
+  summarise(total_cases = sum(Nuevos_casos),
+            total_deaths = sum(new_deaths),
+            female_smokers = sum(female_smokers),
+            male_smokers = sum(male_smokers),
+            people_fully_vaccinated = sum(new_vaccinations),
+            Pacientes_en_UCI = sum(Pacientes_en_UCI))
+
+
+names(data)
 
 # AFRICA
 
@@ -53,22 +80,30 @@ conf_df_a <- coronavirus %>%
 aa <- data %>% 
   filter(continent == "Africa") 
 
-names(aa)
-
-aa <- select(aa, date, Nuevos_casos, new_deaths, new_vaccinations)
+aa <- select(aa, date, Nuevos_casos, new_deaths, 
+             new_vaccinations, female_smokers,
+             male_smokers, Pacientes_en_UCI)
 aaa <- 
   aa %>%
   group_by(fecha = lubridate::floor_date(date, "month")) %>%
   summarise(total_cases = sum(Nuevos_casos),
             total_deaths = sum(new_deaths),
-            people_fully_vaccinated = sum(new_vaccinations))
+            female_smokers = sum(female_smokers),
+            male_smokers = sum(male_smokers),
+            people_fully_vaccinated = sum(new_vaccinations),
+            Pacientes_en_UCI = sum(Pacientes_en_UCI))
 
 
 
 
 # asiA
 
-conf_df_e <- coronavirus %>% 
+lista_pais_as <- filter(data, continent=="Asia")
+lista_pais_as <- table(lista_pais_as$location)
+lista_pais_as <- as.data.frame(lista_pais_as)
+lista_pais_as <- lista_pais_as$Var1
+
+conf_df_as <- coronavirus %>% 
   filter(continent_name=="Asia") %>%
   filter(type == "confirmed") %>%
   group_by(country) %>%
@@ -76,3 +111,18 @@ conf_df_e <- coronavirus %>%
   arrange(-total_cases) %>%
   mutate(parents = "Confirmed") %>%
   ungroup()
+
+
+aa_as <- data %>% 
+  filter(continent == "Asia") 
+
+
+aa_as <- select(aa_as, date, Nuevos_casos, new_deaths, new_vaccinations)
+aaa_as <- 
+  aa_as %>%
+  group_by(fecha = lubridate::floor_date(date, "month")) %>%
+  summarise(total_cases = sum(Nuevos_casos),
+            total_deaths = sum(new_deaths),
+            people_fully_vaccinated = sum(new_vaccinations))
+
+
