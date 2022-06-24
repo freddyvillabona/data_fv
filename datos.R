@@ -5,14 +5,11 @@ library("tidyr")
 library("lubridate")
 
 data <- read_rds("data1.rds", refhook = NULL)
+#data <- read.csv("data.csv")
 data$date <- as.Date(data$date)
 data[is.na(data)] <- 0
 
-# Se filtran los datos de chile
-#chile <- filter(data, location=="Chile")
-#chile$date <- as.Date(chile$date)
-#chile[is.na(chile)] <- 0
-# se establecen fechas y se renombran las variables
+
 fecha <- format(data$date, "%b-%y")
 data <- cbind(data, fecha)
 

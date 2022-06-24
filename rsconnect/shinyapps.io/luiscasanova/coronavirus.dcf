@@ -1,0 +1,14 @@
+name: coronavirus
+title: coronavirus
+username:
+account: luiscasanova
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 6514567
+bundleId: 6025408
+url: https://luiscasanova.shinyapps.io/coronavirus/
+when: 1655757048.80211
+lastSyncTime: 1655757048.80211
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: data.csv

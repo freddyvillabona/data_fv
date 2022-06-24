@@ -11,15 +11,12 @@ library("shinydashboard")
 library("coronavirus")
 library("readr")
 library("scales")
+library("plotly")
 
 # Se carga la data
-#data <- read.csv("owid-covid-data.csv")
 source("datos.R")
 
-#data("coronavirus")
-#data <- coronavirus
 
-  
 # Se hace la lista despegable
 lista <- c("Nuevos_casos","Total_casos", "total_tests", "Pacientes_en_UCI", "Total_muertes", "Total_de_vacunas",
            "Personas_vacunadas","Vacunas_por_cada_cien_HAB",
@@ -30,11 +27,17 @@ lista <- c("Nuevos_casos","Total_casos", "total_tests", "Pacientes_en_UCI", "Tot
 
 
 
-
-
 #############################
 
 body <- dashboardBody(
+  
+  ##
+  
+
+  
+  
+  ##
+  
 tabItems(
 
 ##################
@@ -563,17 +566,27 @@ tabItem(tabName = "Oceania",
 # ui
 ########
 ui <- dashboardPage(
-  dashboardHeader(title = "COVID-19"),
+  dashboardHeader(title = "Programando en R"),
   dashboardSidebar(
     
     sidebarMenu(
-      menuItem("Todo el mundo", tabName = "Global"),
-      menuItem("Africa", tabName = "Africa"),
-      menuItem("Asia", tabName = "Asia"),
-      menuItem("Europa", tabName = "Europa"),
-      menuItem("Norte America", tabName = "North_America"),
-      menuItem("South America", tabName = "South_America"),
-      menuItem("Oceania", tabName = "Oceania")
+      menuItem("COVID-19", tabName = "Global",
+               startExpanded = F,
+               
+               
+               menuSubItem("Africa", tabName = "Africa"),
+               menuSubItem("Asia", tabName = "Asia"),
+               menuSubItem("Europa", tabName = "Europa"),
+               menuSubItem("Norte America", tabName = "North_America"),
+               menuSubItem("South America", tabName = "South_America"),
+               menuSubItem("Oceania", tabName = "Oceania")
+               
+               
+               ),
+      
+      menuItem("Mapas", tabName = "map"),
+      menuItem("R Markdown", tabName = "R_Markdown")
+   
     
   
       )
@@ -1262,12 +1275,6 @@ output$clavegrafico7_eu <- renderPlotly({
            xaxis = list(title = ""))
   
 })
-
-
-
-
-
-
 
 ###################################
 # norte america
