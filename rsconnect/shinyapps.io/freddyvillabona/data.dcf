@@ -5,10 +5,10 @@ account: freddyvillabona
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 6545857
-bundleId: 6041159
+bundleId: 6042187
 url: https://freddyvillabona.shinyapps.io/data/
-when: 1656106849.16884
-lastSyncTime: 1656106849.16884
+when: 1656154881.56966
+lastSyncTime: 1656154881.56966
 asMultiple: FALSE
 asStatic: FALSE
-ignoredFiles: data.csv|p.R
+ignoredFiles: p.R

@@ -1,0 +1,260 @@
+Alternative Station;Country;City;Zip;Adress;Latitude;Longitude;N
+Flugplatz Frankfurt-Egelsbach - EDFE;;;;;49,960;8,641;1
+Flugplatz Wiesbaden - ETOU;;;;;50,049;8,324;2
+Flugplatz Heppenheim - EDEP;;;;;49,624;8,621;3
+Flugplatz Michelstadt/Odenwald - EDFO;;;;;49,677;8,973;4
+Flugplatz Babenhausen - EDEF;;;;;49,954;8,973;5
+Flugplatz Mengeringhausen - EDVG;;;;;51,375;8,982;6
+Flugplatz Korbach - EDGK;;;;;51,253;8,874;7
+"Flugplatz Wolfhagen ""Graner Berg"" - EDGW";;;;;51,306;9,175;8
+Flugplatz Fritzlar - ETHF;;;;;51,306;9,175;9
+Flugplatz Allendorf/Eder - EDFQ;;;;;51,035;8,679;10
+Flugplatz Mosenberg - EDEM;;;;;51,035;8,679;11
+Flugplatz Bad Hersfeld - EDEN;;;;;50,843;9,707;12
+Flugplatz Wasserkuppe - EDER;;;;;50,497;9,949;13
+Flugplatz Lauterbach - EDFT;;;;;50,683;9,410;14
+Flugplatz Marburg-Schönstadt - EDFN;;;;;50,874;8,814;15
+Flugplatz Bottenhorn - EDGT;;;;;50,794;8,462;16
+Flugplatz Hirzenhain - EDFI;;;;;50,787;8,392;17
+Flugplatz Breitscheid - EDGB;;;;;50,677;8,172;18
+Flugplatz Giessen-Lützellinden - EDFL;;;;;50,543;8,591;19
+Flugplatz Fulda-Jossa - EDGF;;;;;50,475;9,440;20
+Flugplatz Gelnhausen - EDFG;;;;;50,196;9,170;21
+Flugplatz Reichelsheim - EDFB;;;;;50,337;8,878;22
+Flugplatz Ober-Mörlen - EDFP;;;;;50,362;8,711;23
+Flugplatz Anspach/Taunus - EDFA;;;;;50,290;8,538;24
+Flugplatz Elz - EDFY;;;;;50,427;8,013;25
+Flugplatz Mendig - EDRE;;;;;50,364;7,314;26
+Flugplatz Koblenz-Winningen - EDRK;;;;;50,325;7,528;27
+Flugplatz Büchel - ETSB;;;;;50,174;7,063;28
+Flugplatz Bitburg - EDRB;;;;;49,943;6,560;29
+Flugplatz Traben-Trarbach/Mont Royal - EDRM;;;;;49,968;7,111;30
+Flugplatz Bad Sobernheim-Domberg - EDRS;;;;;49,789;7,664;31
+Flugplatz Nannhausen - EDRN;;;;;49,970;7,479;32
+Flugplatz Idar-Oberstein/Göttschied - EDRG;;;;;49,732;7,336;33
+Flugplatz Ramstein - ETAR;;;;;49,441;7,616;34
+Flugplatz Zweibrücken - EDRZ;;;;;49,210;7,400;35
+Flugplatz Speyer - EDRY;;;;;49,303;8,452;36
+Flugplatz Worms - EDFV;;;;;49,606;8,367;37
+Flugplatz Oppenheim - EDGP;;;;;49,839;8,375;38
+Flugplatz Mainz/Finthen - EDFZ;;;;;49,969;8,150;39
+EDEH (Herrenteich);;;;;49,348;8,490;40
+EDEW (Walldürn);;;;;49,580;9,401;41
+EDFM (Mannheim City);;;;;49,476;8,520;42
+EDFX (Hockenheim);;;;;49,323;8,527;43
+EDGI (Ingelfingen-Bühlhof);;;;;49,321;9,665;44
+EDGM (Mosbach-Lohrbach);;;;;49,396;9,125;45
+EDPT (Gerstetten);;;;;48,621;10,064;46
+EDGU (Unterschüpf);;;;;49,515;9,672;47
+EDGX (Walldorf);;;;;49,306;8,657;48
+EDGZ (Weinheim/Bergstraße);;;;;49,570;8,611;49
+EDMB (Biberach an der Riss);;;;;48,113;9,764;50
+EDMC (Blaubeuren);;;;;48,418;9,800;51
+EDMT (Tannheim);;;;;48,009;10,104;52
+EDNE (Erbach);;;;;48,341;9,914;53
+EDNG (Giengen/Brenz);;;;;48,635;10,214;54
+EDNL (Leutkrich-Unterzeil);;;;;47,857;10,009;55
+EDNQ (Bopfingen);;;;;48,848;10,333;56
+EDPA (Aalen-Heidenheim/Elchingen);;;;;48,778;10,272;57
+EDPB (Bad Ditzenbach);;;;;48,564;9,726;58
+EDPJ (Laichingen);;;;;48,495;9,637;59
+EDPM (Donzdorf);;;;;48,677;9,847;60
+EDPU (Bartholomä-Amalienhof);;;;;48,743;10,007;61
+EDPY (Ellwangen);;;;;48,961;10,231;62
+EDRI (Linkenheim);;;;;49,143;8,398;63
+EDSA (Albstadt-Degerfeld);;;;;48,250;9,068;64
+EDSE (Göppingen-Bezgenriet);;;;;48,659;9,622;65
+EDSG (Grabenstetten);;;;;48,533;9,444;66
+EDSH (Backnang-Heiningen);;;;;48,920;9,456;67
+EDSI (Binningen);;;;;47,798;8,719;68
+EDSK (Kehl-Sundheim);;;;;48,561;7,843;69
+EDSL (Blumberg);;;;;47,843;8,564;70
+EDSN (Neuhausen ob Eck);;;;;47,976;8,905;71
+EDSO (Gruibingen-Nortel);;;;;48,620;9,654;72
+EDSR (Radolfzell-Stahringen);;;;;47,802;8,979;73
+EDST (Hahnweide);;;;;48,631;9,430;74
+EDSV (Wächtersberg);;;;;48,615;8,756;75
+EDSW (Altdorf-Wallburg);;;;;48,269;7,841;76
+EDSZ (Rottweil-Zepfenhan);;;;;48,186;8,719;77
+EDTB (Baden-Oos);;;;;48,791;8,185;78
+EDTC (Bruchsal);;;;;49,134;8,565;79
+EDTD (Donaueschingen-Villingen);;;;;47,973;8,522;80
+EDTF (Freiburg im Breisgau);;;;;48,022;7,832;81
+EDTG (Bremgarten);;;;;47,906;7,622;82
+EDTH (Heubach);;;;;48,803;9,931;83
+EDTK (Sinsheim);;;;;49,246;8,894;84
+EDTL (Lahr);;;;;48,359;7,820;85
+EDTM (Mengen-Hohentengen);;;;;48,054;9,373;86
+EDTN (Nabern/Teck);;;;;48,612;9,477;87
+EDTO (Offenburg);;;;;48,448;7,924;88
+EDTP (Pfullendorf);;;;;47,909;9,250;89
+EDTQ (Pattonville);;;;;48,863;9,225;90
+EDTR (Herten-Rheinfelden);;;;;47,560;7,749;91
+EDTS (Schwenningen am Neckar);;;;;48,065;8,570;92
+EDTU (Saulgau);;;;;48,029;9,506;93
+EDTW (Winzeln-Schramberg);;;;;48,279;8,427;94
+EDTX (Schwäbisch Hall/Weckrieden);;;;;49,124;9,781;95
+EDTY (Schwäbisch Hall);;;;;49,118;9,780;96
+EDTZ (Konstanz);;;;;47,681;9,139;97
+ETHL (Laupheim);;;;;48,220;9,912;98
+ETHN (Niederstetten);;;;;49,392;9,959;99
+EDFC (Aschaffenburg);;;;;49,939;9,064;100
+EDFD (Bad Neustadt/Saale Grasberg);;;;;50,306;10,226;101
+EDFJ (Lager-Hammelburg);;;;;50,098;9,881;102
+EDFK (Bad Kissingen);;;;;50,208;10,069;103
+EDFR (Rothenburg ob der Tauber);;;;;49,389;10,218;104
+EDFS (Schweinfurt Süd);;;;;50,011;10,249;105
+EDFU (Mainbullau);;;;;49,695;9,182;106
+EDFW (Würzburg-Schenkenturm);;;;;49,817;9,898;107
+EDGH (Hettstadt);;;;;49,798;9,836;108
+EDGJ (Ochsenfurt);;;;;49,673;10,070;109
+EDJG (Grabenstätt);;;;;47,852;12,550;110
+EDMA (Augsburg);;;;;48,425;10,931;111
+EDMD (Dachau-Gröbenried);;;;;48,228;11,423;112
+EDME (Eggenfelden);;;;;48,395;12,722;113
+EDMF (Fürstenzell);;;;;48,517;13,346;114
+EDMG (Günzburg-Donauried);;;;;48,486;10,282;115
+EDMH (Gunzenhausen-Reutberg);;;;;49,112;10,782;116
+EDMI (Illertissen);;;;;48,234;10,137;117
+EDMJ (Jesenwang);;;;;48,174;11,125;118
+EDMK (Kempten-Durach);;;;;47,692;10,337;119
+EDML (Landshut);;;;;48,512;12,035;120
+EDMN (Mindelheim-Mattsies);;;;;48,109;10,523;121
+EDMP (Vilsbiburg);;;;;48,425;12,345;122
+EDMQ (Donauwörth-Genderkingen);;;;;48,702;10,852;123
+EDMS (Straubing);;;;;48,900;12,514;124
+EDMU (Gundelfingen);;;;;48,569;10,358;125
+EDMV (Vilshofen);;;;;48,637;13,190;126
+EDMW (Deggendorf);;;;;48,830;12,880;127
+EDMY (Mühldorf);;;;;48,279;12,502;128
+EDNA (Ampfing-Waldkraiburg);;;;;48,263;12,413;129
+EDNB (Arnbruck);;;;;49,127;12,984;130
+EDNC (Beilngries);;;;;49,021;11,482;131
+EDND (Dinkelsbühl-Sinbronn);;;;;49,064;10,402;132
+EDNF (Elsenthal-Grafenau);;;;;48,822;13,367;133
+EDNH (Bad Wörishofen-Nord);;;;;48,015;10,614;134
+EDNI (Berching);;;;;49,131;11,443;135
+EDNJ (Neuburg-Egweil);;;;;48,782;11,216;136
+EDNK (Kirchdorf/Inn);;;;;48,239;12,978;137
+EDNM (Nittenau-Bruck);;;;;49,221;12,296;138
+EDNO (Nördlingen);;;;;48,870;10,505;139
+EDNP (Pfarrkirchen);;;;;48,420;12,865;140
+EDNR (Regensburg-Oberhub);;;;;49,142;12,081;141
+EDNS (Schwabmünchen);;;;;48,179;10,705;142
+EDNT (Treuchtlingen-Bubenheim);;;;;48,995;10,885;143
+EDNU (Thannhausen);;;;;48,290;10,443;144
+EDNV (Vogtareuth);;;;;47,945;12,204;145
+EDNW (Weissenhorn);;;;;48,289;10,139;146
+EDNX (Oberschleissheim);;;;;48,239;11,559;147
+EDNZ (Zell-Haidberg);;;;;50,137;11,797;148
+EDPC (Bad Endorf/Jolling);;;;;47,926;12,287;149
+EDPD (Dingolfing);;;;;48,656;12,499;150
+EDPE (Eichstätt);;;;;48,877;11,181;151
+EDPF (Schwandorf);;;;;49,340;12,185;152
+EDPG (Griesau);;;;;48,954;12,421;153
+EDPH (Schwabach-Büchenbach);;;;;49,268;11,010;154
+EDPI (Moosburg auf der Kippe);;;;;48,458;11,943;155
+EDPK (Schönberg);;;;;48,047;12,501;156
+EDPO (Neumarkt/Oberpfalz);;;;;49,285;11,443;157
+EDPQ (Schmidgaden);;;;;49,429;12,098;158
+EDPS (Sonnen);;;;;48,681;13,693;159
+EDPW (Thalmässing-Waizenhofen);;;;;49,064;11,209;160
+EDQA (Bamberg-Breitenau);;;;;49,918;10,912;161
+EDQC (Coburg-Brandensteinsebene);;;;;50,262;10,994;162
+EDQD (Bayreuth);;;;;49,984;11,640;163
+EDQE (Burg Feuerstein);;;;;49,794;11,130;164
+EDQF (Ansbach-Petersdorf);;;;;49,360;10,669;165
+EDQG (Giebelstadt);;;;;49,649;9,977;166
+EDQH (Herzogenaurach);;;;;49,583;10,880;167
+EDQI (Lauf-Lillinghof);;;;;49,604;11,283;168
+EDQK (Kulmbach);;;;;50,135;11,461;169
+EDQL (Lichtenfels);;;;;50,148;11,047;170
+EDQM (Hof-Plauen);;;;;50,288;11,863;171
+EDQN (Neustadt/Aisch);;;;;49,587;10,577;172
+EDQO (Ottengrüner Heide);;;;;50,226;11,731;173
+EDQP (Rosenthal-Field-Plössen);;;;;49,863;11,784;174
+EDQR (Ebern-Sendelbach);;;;;50,040;10,821;175
+EDQT (Hassfurt/Schweinfurt);;;;;50,018;10,526;176
+EDQW (Weiden/Oberpfalz);;;;;49,678;12,116;177
+EDQX (Hetzleser Berg);;;;;49,642;11,160;178
+EDQY (Coburg-Steinrücken);;;;;50,230;10,994;179
+EDQZ (Pegnitz-Zipser Berg);;;;;49,762;11,570;180
+ETHA (Altenstadt);;;;;47,835;10,870;181
+ETIC (Grafenwöhr);;;;;49,698;11,940;182
+ETSA (Landsberg/Lech);;;;;49,698;11,940;183
+ETSE (Erding);;;;;48,321;11,945;184
+ETSI (Ingolstadt/Manching);;;;;48,724;11,545;185
+ETSL (Lechfeld);;;;;48,194;10,869;186
+ETSN (Neuburg);;;;;48,710;11,212;187
+EDDG (Münster/Osnabrück);;;;;52,133;7,682;188
+EDDK (Köln/Bonn);;;;;50,877;7,132;189
+EDDL (Düsseldorf);;;;;51,287;6,767;190
+EDGS (Siegerland);;;;;50,709;8,079;191
+EDGQ (Schameder);;;;;51,000;8,310;192
+EDKA (Aachen-Merzbrück);;;;;50,822;6,187;193
+EDKB (Bonn-Hangelar);;;;;50,768;7,162;194
+EDKD (Altena-Hegenscheid);;;;;51,312;7,703;195
+EDKF (Bergneustadt);;;;;51,051;7,706;196
+EDKH (Hünsborn);;;;;50,928;7,896;197
+EDKL (Leverkusen);;;;;51,015;7,005;198
+EDKM (Meschede-Schüren);;;;;51,302;8,239;199
+EDKN (Wipperfürth-Neye);;;;;51,124;7,371;200
+EDKO (Brilon/Hochsauerland);;;;;51,402;8,642;201
+EDKP (Plettenberg-Hüinghausen);;;;;51,191;7,790;202
+EDKR (Schmallenberg-Rennefeld);;;;;51,161;8,262;203
+EDKU (Attendorn-Finnentrop);;;;;51,145;7,936;204
+EDKV (Dahlemer Binz);;;;;50,406;6,530;205
+EDKW (Werdohl-Küntrop);;;;;51,297;7,817;206
+EDKZ (Meinerzhagen);;;;;51,099;7,599;207
+EDLA (Arnsberg-Menden);;;;;51,483;7,898;208
+EDLB (Borkenberge);;;;;51,779;7,288;209
+EDLC (Kamp-Lintfort);;;;;51,529;6,536;210
+EDLD (Dinslaken/Schwarze Heide);;;;;51,616;6,861;211
+EDLE (Essen/Mülheim);;;;;51,402;6,938;212
+EDLF (Grefrath-Niershorst);;;;;51,333;6,359;213
+EDLG (Goch-Asperden);;;;;51,690;6,104;214
+EDLH (Hamm-Lippewiesen);;;;;51,689;7,815;215
+EDLI (Bielefeld);;;;;51,964;8,545;216
+EDLJ (Detmold);;;;;51,940;8,905;217
+EDLK (Krefeld-Egelsberg);;;;;51,384;6,587;218
+EDLM (Marl-Loemühle);;;;;51,647;7,162;219
+EDLN (Mönchengladbach);;;;;51,231;6,502;220
+EDLO (Oerlinghausen);;;;;51,931;8,665;221
+EDLP (Paderborn/Lippstadt);;;;;51,614;8,617;222
+EDLR (Paderborn-Haxterberg);;;;;51,688;8,776;223
+EDLS (Stadtlohn-Vreden);;;;;51,995;6,842;224
+EDLT (Münster-Telgte);;;;;51,944;7,773;225
+EDLV (Niederrhein);;;;;51,602;6,143;226
+EDLW (Dortmund);;;;;51,518;7,614;227
+EDLX (Wesel-Römerwardt);;;;;51,661;6,596;228
+EDLY (Borken-Hoxfeld);;;;;51,853;6,814;229
+EDLZ (Soest/Bad Sassend);;;;;51,578;8,214;230
+EDVF (Blomberg-Borkhausen);;;;;51,917;9,110;231
+EDVI (Höxter-Holzminden);;;;;51,806;9,378;232
+EDVY (Porta Westfalica);;;;;52,221;8,861;233
+EDXE (Rheine-Eschendorf);;;;;52,276;7,492;234
+ETHE (Rheine-Bentlage);;;;;52,292;7,385;235
+ETNG (Geilenkirchen);;;;;50,960;6,041;236
+ETNN (Nörvenich);;;;;50,829;6,652;237
+EDRJ (Saarlouis-Düren);;;;;49,311;6,671;238
+Klinikum Höchst;;Frankfurt am Main;65929;Gotenstraße 6-8;50,108;8,547;239
+Uni-Klinik, Haus 95 Neurologie/Neurochirurgie;;Frankfurt am Main;60590;Theodor Stern Kai 7;50,095;8,662;240
+Herz-Jesu-Krankenhaus;;Fulda;36039;Buttlarstr. 74;50,563;9,672;241
+Klinikum Boden;;Fulda;36043;Pacelliallee 4;50,546;9,704;242
+Kreisklinik;;Groß-Gerau;64521;Wilhelm-Seipp-Str. 3;49,913;8,475;243
+Feuerwache;;Hanau;63450;Leimenstr. 20;50,133;8,923;244
+Kreiskrankenhaus;;Heppenheim (Bergstraße);64646;Viernheimer Str. 2;49,629;8,623;245
+Asklepios Klinik;;Langen (Hessen);63225;Röntgenstr. 20;49,997;8,685;246
+Gesundheits- und Pflegezentrum;;Rüsselsheim am Main;65428;August-Bebel-Str. 59;49,982;8,425;247
+HELIOS Dr. Horst-Schmidt Klinik;;Wiesbaden;65199;Ludwig-Erhard-Straße 100;50,063;8,189;248
+Heilig-Geist-Hospital;;Bingen am Rhein;55411;Kapuzinerstr. 15-17;49,968;7,896;249
+Stadtklinik;;Frankenthal (Pfalz);67227;Elsa-Brändström-Str. 1;49,542;8,332;250
+Klinikum;;Idar-Oberstein;55743;Dr.-Ottmar-Kohler-Str. 2;49,716;7,319;251
+Stiftungsklinikum Mittelrhein;;Koblenz;56068;Johannes-Müller-Str. 7;50,347;7,593;252
+Brüderkrankenhaus;;Montabaur;56410;Koblenzer Str. 11-13;50,431;7,833;253
+St. Vincentius Krankenhaus;;Speyer;67346;Holzstr. 4a;49,316;8,420;254
+Klinikum;;Trier;54293;August-Antz-Str. 22;49,808;6,690;255
+Eduardus-Krankenhaus;;Köln;50679;Custodisstr. 3-17;50,931;6,980;256
+Malteser KH St. Hildegardis;;Köln;50931;Bachemer Straße 29-33;50,931;6,923;257
+ADAC Luftrettung - Segelfluggelände Eßweiler;;;;;49,560;7,577;258
+ADAC Luftrettungsstation Dinkelsbühl;;;;;49,065;10,401;259
