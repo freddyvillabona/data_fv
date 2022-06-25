@@ -7,7 +7,7 @@ library("hrbrthemes")
 library("ggplot2")
 
 # Dat:
-s <- read.csv("s.csv")
+s <- read.csv("emisiones/s.csv")
 names(s)
 
 # ggplot:
