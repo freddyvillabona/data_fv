@@ -1,0 +1,14 @@
+name: data
+title: data
+username:
+account: freddyvillabona
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 6545857
+bundleId: 6041159
+url: https://freddyvillabona.shinyapps.io/data/
+when: 1656106849.16884
+lastSyncTime: 1656106849.16884
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: data.csv|p.R

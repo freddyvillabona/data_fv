@@ -36,7 +36,7 @@ conf_df_t <- coronavirus %>%
 
 # Global
 
-gg <- select(data, date, Nuevos_casos, 
+gg <- dplyr::select(data, date, Nuevos_casos, 
              new_deaths, new_vaccinations,
              female_smokers, male_smokers, 
              Pacientes_en_UCI)
@@ -69,7 +69,7 @@ conf_df_a <- coronavirus %>%
 aa <- data %>% 
   filter(continent == "Africa") 
 
-aa <- select(aa, date, Nuevos_casos, new_deaths, 
+aa <- dplyr::select(aa, date, Nuevos_casos, new_deaths, 
              new_vaccinations, female_smokers,
              male_smokers, Pacientes_en_UCI)
 aaa <- 
@@ -102,7 +102,7 @@ conf_df_as <- coronavirus %>%
 aa_as <- data %>% 
   filter(continent == "Asia") 
 
-aa_as <- select(aa_as, date, Nuevos_casos, new_deaths, new_vaccinations)
+aa_as <- dplyr::select(aa_as, date, Nuevos_casos, new_deaths, new_vaccinations)
 aaa_as <- 
   aa_as %>%
   group_by(fecha = lubridate::floor_date(date, "month")) %>%
@@ -131,7 +131,7 @@ conf_df_eu <- coronavirus %>%
 aa_eu <- data %>% 
   filter(continent == "Europe") 
 
-aa_eu <- select(aa_eu, date, Nuevos_casos, new_deaths, new_vaccinations)
+aa_eu <- dplyr::select(aa_eu, date, Nuevos_casos, new_deaths, new_vaccinations)
 aaa_eu <- 
   aa_eu %>%
   group_by(fecha = lubridate::floor_date(date, "month")) %>%
@@ -159,7 +159,7 @@ conf_df_na <- coronavirus %>%
 aa_na <- data %>% 
   filter(continent == "North America") 
 
-aa_na <- select(aa_eu, date, Nuevos_casos, new_deaths, new_vaccinations)
+aa_na <- dplyr::select(aa_eu, date, Nuevos_casos, new_deaths, new_vaccinations)
 aaa_na <- 
   aa_na %>%
   group_by(fecha = lubridate::floor_date(date, "month")) %>%
@@ -190,7 +190,7 @@ conf_df_sa <- coronavirus %>%
 aa_sa <- data %>% 
   filter(continent == "South America") 
 
-aa_sa <- select(aa_sa, date, Nuevos_casos, new_deaths, new_vaccinations)
+aa_sa <- dplyr::select(aa_sa, date, Nuevos_casos, new_deaths, new_vaccinations)
 aaa_sa <- 
   aa_sa %>%
   group_by(fecha = lubridate::floor_date(date, "month")) %>%
@@ -221,7 +221,7 @@ conf_df_o <- coronavirus %>%
 aa_o <- data %>% 
   filter(continent == "Oceania") 
 
-aa_o <- select(aa_o, date, Nuevos_casos, new_deaths, new_vaccinations)
+aa_o <- dplyr::select(aa_o, date, Nuevos_casos, new_deaths, new_vaccinations)
 aaa_o <- 
   aa_o %>%
   group_by(fecha = lubridate::floor_date(date, "month")) %>%

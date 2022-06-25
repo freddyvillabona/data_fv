@@ -13,8 +13,18 @@ library("readr")
 library("scales")
 library("plotly")
 
+library("pdfetch")
+library("xts")
+
+
+
 # Se carga la data
 source("datos.R")
+
+# Finanzas
+lista_f <- c("TSLA","^IXIC","^IBEX","BTC-USD")
+#source("funcion.R")
+
 
 
 # Se hace la lista despegable
@@ -535,10 +545,66 @@ tabItem(tabName = "Oceania",
         )
         
         
-)
+),
+
+
+#########
+## finanzas
+#########
 
     
-      
+tabItem(tabName = "Yahoo_Finanzas",
+        
+        
+        
+        fluidRow(
+          
+          column(10,
+                 plotOutput("clavegrafico1_f")),
+          
+          column(2,
+                 selectInput("opciones",
+                             "Selecciona un Ticket", 
+                             choices = lista_f, 
+                             selected = TRUE),
+                 
+                 hr(),
+                 
+                 dateInput("date1", 
+                           "Fecha inicio:", 
+                           value = "2019-01-01",
+                           min = "2015-01-01"),
+                 
+                 hr(),
+                 
+                 dateInput("date2", 
+                           "Fecha fin:", 
+                           value = "2022-05-18",
+                           min = "2015-01-01")
+                 
+                 
+          )
+          
+        ),
+        
+        fluidRow(
+          
+          column(10,
+                 
+                 plotOutput("clavegrafico2_f")
+                 
+          )
+          
+        )
+        
+        
+        
+        
+        
+        
+        
+        
+        )     
           
           
           
@@ -548,6 +614,13 @@ tabItem(tabName = "Oceania",
 
 
 ) ######## FIN BODY
+
+
+
+
+
+
+
 
 
 
@@ -573,7 +646,7 @@ ui <- dashboardPage(
       menuItem("COVID-19", tabName = "Global",
                startExpanded = F,
                
-               
+               menuSubItem("Todo el mundo", tabName = "Global"),
                menuSubItem("Africa", tabName = "Africa"),
                menuSubItem("Asia", tabName = "Asia"),
                menuSubItem("Europa", tabName = "Europa"),
@@ -584,9 +657,12 @@ ui <- dashboardPage(
                
                ),
       
-      menuItem("Mapas", tabName = "map"),
-      menuItem("R Markdown", tabName = "R_Markdown")
-   
+      #menuItem("Mapas", tabName = "map"),
+      #menuItem("R Markdown", tabName = "R_Markdown")
+      menuItem("Yahoo! Finanzas", tabName = "Yahoo_Finanzas")
+      
+
+      
     
   
       )
@@ -785,7 +861,7 @@ output$clavegrafico5_a <- renderPlotly({
   
   dat_a <- filter(data, location==Z) 
   
-  dat_a <- select(dat_a, date, Nuevos_casos, new_deaths, 
+  dat_a <- dplyr::select(dat_a, date, Nuevos_casos, new_deaths, 
                new_vaccinations, female_smokers,
                male_smokers, Pacientes_en_UCI) %>%
     group_by(fecha = lubridate::floor_date(date, "month")) %>%
@@ -818,7 +894,7 @@ output$clavegrafico6_a <- renderPlotly({
   
   dat_a2 <- filter(data, location==Z) 
   
-  dat_a2 <- select(dat_a2, date, Nuevos_casos, new_deaths, 
+  dat_a2 <- dplyr::select(dat_a2, date, Nuevos_casos, new_deaths, 
                   new_vaccinations, female_smokers,
                   male_smokers, Pacientes_en_UCI) %>%
     group_by(fecha = lubridate::floor_date(date, "month")) %>%
@@ -850,7 +926,7 @@ output$clavegrafico7_a <- renderPlotly({
   
   dat_a3 <- filter(data, location==Z) 
   
-  dat_a3 <- select(dat_a3, date, Nuevos_casos, new_deaths, 
+  dat_a3 <- dplyr::select(dat_a3, date, Nuevos_casos, new_deaths, 
                    new_vaccinations, female_smokers,
                    male_smokers, Pacientes_en_UCI) %>%
     group_by(fecha = lubridate::floor_date(date, "month")) %>%
@@ -980,7 +1056,7 @@ output$clavegrafico5_as <- renderPlotly({
   
   dat_as <- filter(data, location==Z) 
   
-  dat_as <- select(dat_as, date, Nuevos_casos, new_deaths, 
+  dat_as <- dplyr::select(dat_as, date, Nuevos_casos, new_deaths, 
                   new_vaccinations, female_smokers,
                   male_smokers, Pacientes_en_UCI) %>%
     group_by(fecha = lubridate::floor_date(date, "month")) %>%
@@ -1013,7 +1089,7 @@ output$clavegrafico6_as <- renderPlotly({
   
   dat_a2 <- filter(data, location==Z) 
   
-  dat_a2 <- select(dat_a2, date, Nuevos_casos, new_deaths, 
+  dat_a2 <- dplyr::select(dat_a2, date, Nuevos_casos, new_deaths, 
                    new_vaccinations, female_smokers,
                    male_smokers, Pacientes_en_UCI) %>%
     group_by(fecha = lubridate::floor_date(date, "month")) %>%
@@ -1045,7 +1121,7 @@ output$clavegrafico7_as <- renderPlotly({
   
   dat_a3 <- filter(data, location==Z) 
   
-  dat_a3 <- select(dat_a3, date, Nuevos_casos, new_deaths, 
+  dat_a3 <- dplyr::select(dat_a3, date, Nuevos_casos, new_deaths, 
                    new_vaccinations, female_smokers,
                    male_smokers, Pacientes_en_UCI) %>%
     group_by(fecha = lubridate::floor_date(date, "month")) %>%
@@ -1179,7 +1255,7 @@ output$clavegrafico5_eu <- renderPlotly({
   
   dat_eu <- filter(data, location==Z) 
   
-  dat_eu <- select(dat_eu, date, Nuevos_casos, new_deaths, 
+  dat_eu <- dplyr::select(dat_eu, date, Nuevos_casos, new_deaths, 
                    new_vaccinations, female_smokers,
                    male_smokers, Pacientes_en_UCI) %>%
     group_by(fecha = lubridate::floor_date(date, "month")) %>%
@@ -1212,7 +1288,7 @@ output$clavegrafico6_eu <- renderPlotly({
   
   dat_eu <- filter(data, location==Z) 
   
-  dat_eu <- select(dat_eu, date, Nuevos_casos, new_deaths, 
+  dat_eu <- dplyr::select(dat_eu, date, Nuevos_casos, new_deaths, 
                    new_vaccinations, female_smokers,
                    male_smokers, Pacientes_en_UCI) %>%
     group_by(fecha = lubridate::floor_date(date, "month")) %>%
@@ -1244,7 +1320,7 @@ output$clavegrafico7_eu <- renderPlotly({
   
   dat_eu <- filter(data, location==Z) 
   
-  dat_eu <- select(dat_eu, date, Nuevos_casos, new_deaths, 
+  dat_eu <- dplyr::select(dat_eu, date, Nuevos_casos, new_deaths, 
                    new_vaccinations, female_smokers,
                    male_smokers, Pacientes_en_UCI) %>%
     group_by(fecha = lubridate::floor_date(date, "month")) %>%
@@ -1373,7 +1449,7 @@ output$clavegrafico5_na <- renderPlotly({
   
   dat_na <- filter(data, location==Z) 
   
-  dat_na <- select(dat_na, date, Nuevos_casos, new_deaths, 
+  dat_na <- dplyr::select(dat_na, date, Nuevos_casos, new_deaths, 
                   new_vaccinations, female_smokers,
                   male_smokers, Pacientes_en_UCI) %>%
     group_by(fecha = lubridate::floor_date(date, "month")) %>%
@@ -1406,7 +1482,7 @@ output$clavegrafico6_na <- renderPlotly({
   
   dat_na2 <- filter(data, location==Z) 
   
-  dat_na2 <- select(dat_na2, date, Nuevos_casos, new_deaths, 
+  dat_na2 <- dplyr::select(dat_na2, date, Nuevos_casos, new_deaths, 
                    new_vaccinations, female_smokers,
                    male_smokers, Pacientes_en_UCI) %>%
     group_by(fecha = lubridate::floor_date(date, "month")) %>%
@@ -1438,7 +1514,7 @@ output$clavegrafico7_na <- renderPlotly({
   
   dat_na3 <- filter(data, location==Z) 
   
-  dat_na3 <- select(dat_na3, date, Nuevos_casos, new_deaths, 
+  dat_na3 <- dplyr::select(dat_na3, date, Nuevos_casos, new_deaths, 
                    new_vaccinations, female_smokers,
                    male_smokers, Pacientes_en_UCI) %>%
     group_by(fecha = lubridate::floor_date(date, "month")) %>%
@@ -1573,7 +1649,7 @@ output$clavegrafico5_sa <- renderPlotly({
   
   dat_sa <- filter(data, location==Z) 
   
-  dat_sa <- select(dat_sa, date, Nuevos_casos, new_deaths, 
+  dat_sa <- dplyr::select(dat_sa, date, Nuevos_casos, new_deaths, 
                    new_vaccinations, female_smokers,
                    male_smokers, Pacientes_en_UCI) %>%
     group_by(fecha = lubridate::floor_date(date, "month")) %>%
@@ -1606,7 +1682,7 @@ output$clavegrafico6_sa <- renderPlotly({
   
   dat_a2 <- filter(data, location==Z) 
   
-  dat_a2 <- select(dat_a2, date, Nuevos_casos, new_deaths, 
+  dat_a2 <- dplyr::select(dat_a2, date, Nuevos_casos, new_deaths, 
                    new_vaccinations, female_smokers,
                    male_smokers, Pacientes_en_UCI) %>%
     group_by(fecha = lubridate::floor_date(date, "month")) %>%
@@ -1638,7 +1714,7 @@ output$clavegrafico7_sa <- renderPlotly({
   
   dat_a3 <- filter(data, location==Z) 
   
-  dat_a3 <- select(dat_a3, date, Nuevos_casos, new_deaths, 
+  dat_a3 <- dplyr::select(dat_a3, date, Nuevos_casos, new_deaths, 
                    new_vaccinations, female_smokers,
                    male_smokers, Pacientes_en_UCI) %>%
     group_by(fecha = lubridate::floor_date(date, "month")) %>%
@@ -1773,7 +1849,7 @@ output$clavegrafico5_o <- renderPlotly({
   
   dat_o <- filter(data, location==Z) 
   
-  dat_o <- select(dat_o, date, Nuevos_casos, new_deaths, 
+  dat_o <- dplyr::select(dat_o, date, Nuevos_casos, new_deaths, 
                    new_vaccinations, female_smokers,
                    male_smokers, Pacientes_en_UCI) %>%
     group_by(fecha = lubridate::floor_date(date, "month")) %>%
@@ -1806,7 +1882,7 @@ output$clavegrafico6_o <- renderPlotly({
   
   dat_o <- filter(data, location==Z) 
   
-  dat_o <- select(dat_o, date, Nuevos_casos, new_deaths, 
+  dat_o <- dplyr::select(dat_o, date, Nuevos_casos, new_deaths, 
                    new_vaccinations, female_smokers,
                    male_smokers, Pacientes_en_UCI) %>%
     group_by(fecha = lubridate::floor_date(date, "month")) %>%
@@ -1838,7 +1914,7 @@ output$clavegrafico7_o <- renderPlotly({
   
   dat_o <- filter(data, location==Z) 
   
-  dat_o <- select(dat_o, date, Nuevos_casos, new_deaths, 
+  dat_o <- dplyr::select(dat_o, date, Nuevos_casos, new_deaths, 
                    new_vaccinations, female_smokers,
                    male_smokers, Pacientes_en_UCI) %>%
     group_by(fecha = lubridate::floor_date(date, "month")) %>%
@@ -1871,11 +1947,120 @@ output$clavegrafico7_o <- renderPlotly({
 })
 
 
+####
+####
+
+###################################
+# GRAFICO 1  
+###################################
+output$clavegrafico1_f <- renderPlot({
+  
+  dd1 <- input$date1 
+  dd2 <- input$date2 
+  op <- input$opciones
+  op <- paste0('',op,sep = "")
+  
+  data <- pdfetch_YAHOO(
+    op,
+    fields = c("open", 
+               "high", 
+               "low", 
+               "close", 
+               "adjclose", 
+               "volume"),
+    from = as.Date(dd1),
+    to = as.Date(dd2),
+    interval = "1d"
+  )
+  
+  data <- as.data.frame(data)
+  data <- tibble::rownames_to_column(data, var = "Fecha")
+  data$Fecha <- as.Date(data$Fecha)
+  
+  names(data) <- c("Fecha","open","high","low","close","adjclose","volume")
+  
+  library("ggplot2")
+  
+  ggplot2::ggplot() +
+    ggplot2::geom_line(data=data, aes(x=Fecha, y=open, group=1,colour="Open"))+
+    ggplot2::geom_line(data=data,aes(x=Fecha, y=high, group=1,colour="High")) +
+    ggplot2::geom_line(data=data,aes(x=Fecha, y=low, group=1,colour="Low")) +
+    ggplot2::geom_line(data=data,aes(x=Fecha, y=close, group=1,colour="Close")) +
+    ggplot2::geom_line(data=data,aes(x=Fecha, y=adjclose, group=1,colour="adjclose")) +
+    ggplot2::geom_line(data=data,aes(x=Fecha, y=volume, group=1,colour="Volume")) +
+    ggplot2::geom_point() +
+    ggplot2::ylab(" ") +
+    ggplot2::scale_colour_manual("", 
+                                 breaks = c("Open", "High", "Low", "Close","adjclose","Volume"),
+                                 values = c("Open"="red", 
+                                            "High"="gray", 
+                                            "Low"="yellow",
+                                            "adjclose"="orange",
+                                            "Close"="blue" ,
+                                            "Volume"="red")) +
+    ggplot2::scale_y_continuous(labels = function(x) format(x, scientific = F)) +
+    ggthemes::theme_hc()
+  
+  
+})
+
+###################################
+# GRAFICO 2  
+###################################
+output$clavegrafico2_f <- renderPlot({
+  
+  dd1 <- input$date1 
+  dd2 <- input$date2 
+  
+  op <- input$opciones
+  op <- paste0('',op,sep = "")
+  
+  data1 <- pdfetch_YAHOO(
+    op,
+    fields = c("open", 
+               "high", 
+               "low", 
+               "close", 
+               "adjclose", 
+               "volume"),
+    from = as.Date(dd1),
+    to = as.Date(dd2),
+    interval = "1d"
+  )
+  
+  data1 <- as.data.frame(data1)
+  data1 <- tibble::rownames_to_column(data1, var = "Fecha")
+  data1$Fecha <- as.Date(data1$Fecha)
+  
+  names(data1) <- c("Fecha","open","high","low","close","adjclose","volume")
+  
+  
+  ggplot2::ggplot() +
+    ggplot2::geom_line(data=data1, aes(x=Fecha, y=open, group=1,colour="Open"))+
+    ggplot2::geom_line(data=data1,aes(x=Fecha, y=high, group=1,colour="High")) +
+    ggplot2::geom_line(data=data1,aes(x=Fecha, y=low, group=1,colour="Low")) +
+    ggplot2::geom_line(data=data1,aes(x=Fecha, y=close, group=1,colour="Close")) +
+    ggplot2::geom_line(data=data1,aes(x=Fecha, y=adjclose, group=1,colour="adjclose")) +
+    ggplot2::geom_point() +
+    ggplot2::ylab(" ") +
+    
+    ggplot2::scale_colour_manual("", 
+                                 breaks = c("Open", "High", "Low", "Close","adjclose"),
+                                 values = c("Open"="green", 
+                                            "High"="gray", 
+                                            "Low"="yellow",
+                                            "Close"="blue",
+                                            "adjclose"="black")) +
+    
+    
+    ggthemes::theme_hc()
+  
+  
+})
 
 
-
-
-
+####
+####
 
 })
 
